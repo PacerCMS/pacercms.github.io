@@ -1,0 +1,65 @@
+---
+layout: post
+status: publish
+published: true
+title: Introducing the new PacerCMS Installer
+wordpress_id: 18
+wordpress_url: http://pacercms.sourceforge.net/index.php/2007/02/04/introducing-the-new-pacercms-installer/
+date: '2007-02-04 00:01:22 -0600'
+date_gmt: '2007-02-04 06:01:22 -0600'
+categories:
+- Development Notes
+- Tips &amp; Tutorials
+tags: []
+comments:
+- id: 5
+  author: PacerCMS &raquo; Blog Archive &raquo; PacerCMS 0.5 Released
+  author_email: ''
+  author_url: http://pacercms.sourceforge.net/2007/02/13/pacercms-05-released/
+  date: '2008-09-18 01:44:27 -0500'
+  date_gmt: '2008-09-18 07:44:27 -0500'
+  content: "[...] No Hassle Installation Script (#3) [...]"
+---
+<p><em>Note: This is the second in a three part series leading up to the release of PacerCMS 0.5. You can start building for the upcoming version by <a href="/index.php/download/">downloading our preview release</a>.</em></p>
+<div style="float:right;margin-left:10px;"><img src="http://pacercms.sourceforge.net/wp-content/uploads/2007/02/new_installer.png" alt="Installer" />
+<p><small>Installation is a snap with PacerCMS 0.5.</small></p></div>Installers are usually the last element of an application put into place before a release. Of course, it doesn't make much sense to write a program without one. PacerCMS 0.5 introduces our first version of an install script, based heavily on the concepts presented (and in some cases, even the code base) of the <a href="http://wordpress.org/">WordPress blogging platform</a>. While it is not quite as easy as the "<a href="http://codex.wordpress.org/Installing_WordPress">Famous Five Minute Installation</a>", we believe it ranks right on up there.</p>
+<p>Now on to the installation.</p>
+<h4>Requirements</h4></p>
+<ul>
+<li>Apache or compliant Web server</li>
+<li>PHP 4.2 or greater</li>
+<li>MySQL 3.23.23 or greater</li>
+<p></ul></p>
+<h4>Getting Started</h4><br />
+With a bit of experience with setting up a Web application, you should be able to navigate these instructions with relative ease. If you have any questions, just drop us a line in the <a href="http://groups.google.com/group/pacercms-discuss ">PacerCMS Developers Group</a>.</p>
+<h5>Database</h5></p>
+<ol>
+<li>Using a tool such as <a href="http://www.phpmyadmin.net/">phpMyAdmin</a>, create a database for your tables to reside within.</li>
+<li>You will need to know the hostname, database name, username and password for your database installation.</li>
+<li>Assign read and write permissions to the user that will be accessing the database. We recommend creating a separate user account that only has permissions on this one database for security reasons.</li>
+<p></ol></p>
+<h5>PHP Scripts</h5></p>
+<ol>
+<li>Upload the entire contents of the package to your server root, typically an htdocs, www or public folder.
+<li>If you have access to the command line, change the file permissions for the cache directory. (example: <tt>chmod 777 cache/</tt>)
+<li>You will also need write permissions on the <tt>./includes folder</tt> if you wish to use the config file writer. (example: <tt>chmod 777 includes/</tt>)
+<p></ol></p>
+<h5>Web Based Installation</h5></p>
+<ol>
+<li>Open your Web browser to http://path_to_pacercms/INSTALL/, with the CAPTIAL letters.</li>
+<li>If you have already made the <tt>./includes</tt> folder writable, you should be prompted to create the config file.</li>
+<li>Complete the steps provided to create the <tt>config.php</tt> file that will reside in <tt>./includes</tt> folder.</li>
+<li>Upon successful completion, you will be directed to the installer.</li>
+<li>Complete the steps provided to create the database structure and load the default data.</li>
+<li>Be sure to write down the random password given to you, and change it to one that is easy to remember but hard to guess. </li>
+<p></ol></p>
+<h5>Site Settings</h5></p>
+<ol>
+<li>Login to the Site Administration section by opening http://path_to_pacercms/siteadmin/ in your browser.</li>
+<li>Use the login credentials created during the installation process.</li>
+<li>Review the Settings module to add contact information for your publication.</li>
+<li>Review the Sections module to make the sections reflect the section name and editors used by your publication.</li>
+<li>Open the Users module to change the password or add contact information for the site administrator.</li>
+<li>Use the Users module to create login accounts for each contributor the site, using the Access sub-module to control how they interact with the Web site.</li><br />
+</ol></p>
+<p>We have also posted these install instructions on our documentation site should you need more detailed information. Remember, to use this feature you will <a href="/index.php/download/">need version 0.5 or higher</a>. Have a question about using the new installer? Just shoot an <a href="http://groups.google.com/group/pacercms-discuss">e-mail to our developer community</a> and we will be happy to assist.</p>

@@ -1,0 +1,17 @@
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+{% if page.title %}
+<title>{{ site.name }} - {{ page.title }}</title>
+<meta name="title" content="{{ page.title }}">
+{% else %}
+<title>{{ site.name }}</title>
+<meta name="title" content="{{ site.title }}">
+{% endif %}
+<link rel="canonical" href="{{ site.url }}{{ page.url | replace:'/index.html','/'}}">
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml" />
+{% if page.description %}
+<meta name="description" content="{{ page.description }}">
+{% else %}
+<meta name="description" content="{{ content | strip_html | strip_newlines | truncate: 160, '...' }}">
+{% endif %}
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">

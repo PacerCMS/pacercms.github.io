@@ -1,0 +1,35 @@
+---
+layout: post
+status: publish
+published: true
+title: Introducing the Smarty Template Engine
+wordpress_id: 17
+wordpress_url: http://pacercms.sourceforge.net/index.php/2007/02/01/introducing-the-smarty-template-engine/
+date: '2007-02-01 06:45:29 -0600'
+date_gmt: '2007-02-01 14:45:29 -0600'
+categories:
+- Development Notes
+- Tips &amp; Tutorials
+tags: []
+comments:
+- id: 4
+  author: PacerCMS &raquo; Blog Archive &raquo; PacerCMS 0.5 Released
+  author_email: ''
+  author_url: http://pacercms.sourceforge.net/2007/02/13/pacercms-05-released/
+  date: '2008-09-18 01:44:12 -0500'
+  date_gmt: '2008-09-18 07:44:12 -0500'
+  content: "[...] The Smarty Template Engine (#4) [...]"
+---
+<p><em>Note: This is the first in a three part series leading up to the release of PacerCMS 0.5. You can start building for the upcoming version by <a href="/index.php/download/">downloading our preview release</a>.</em></p>
+<p>It is a simple concept, but often overlooked in content management systems. Consider the possibility that programmers have only a passing interest in design, while designers only have a passing interest in programming. If this were true, then why would you force them to share the same file when it comes to changing the look and feel of your Web site?</p>
+<h4>Enter the template engine</h4></p>
+<div style="float:right;margin-left:10px;"><img src="http://pacercms.sourceforge.net/wp-content/uploads/2007/02/article_template.png" alt="Article Template" />
+<p><small>The article template, less the sidebar, is only 18 lines of code. No PHP needed.</small></p></div>Version 0.5 of PacerCMS now includes the <a href="http://smarty.php.net/">Smarty Template Engine</a>, an easy to use and even easier to understand template engine that helps separate your programming logic from the design process. Using only a few bracketed variables, you can break "out of the box" a bit without having to learn PHP. Intrepid programmers looking to add that "something extra" to  the system can easily hook into the underlying framework to do some pretty amazing stuff without worrying a great deal about the presentation.</p>
+<p>Here is how to get started, provided you have already successfully installed PacerCMS.</p>
+<ol>
+<li>Copy the files in your <tt>./templates/default/</tt> directory into the <tt>./templates/local/</tt> folder. This serves two purposes. One, to have a working model to modify to your liking without starting from scratch. Two, you have a backup to quickly refer to if something appears broken.</li>
+<li>Modify your <tt>./includes/config.php</tt> to point to the "local" folder instead of the "default" one. You might catch on that you can create your own folder in the <tt>./templates/</tt> directory as long as the configuration file can find it.</li>
+<li>While you are in there, you might want to turn on debugging by setting <tt>DEBUG_MODE</tt> to "true". This tells Smarty to render a pop-up window every time the page is reloaded to show you exactly what it is grabbing from the PHP scripts. This would be disabled again on the production Web site.</li>
+<li>Take a look inside the "local" folder. The <tt>header.tpl</tt>,<tt>foot.tpl</tt> and <tt>sidebar.tpl</tt> files are handy for your re-usable page elements (like the header, footer, and sidebar of course). All are called using the simple <tt>{include file="<em>file</em>.tpl"}</tt> tag.</li><br />
+</ol></p>
+<p>To learn more about Smarty, <a href="http://smarty.php.net/">visit their Web site</a>. Remember, to use this feature you will <a href="/index.php/download/">need version 0.5 or higher</a>. Have a question about using the new template engine? Just shoot an <a href="http://groups.google.com/group/pacercms-discuss">e-mail to our developer community</a> and we will be happy to assist.</p>

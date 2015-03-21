@@ -1,0 +1,12 @@
+name: PacerCMS
+description: "Content management solution for student and non-daily community newspapers."
+url: https://pacercms.github.io
+
+permalink: /index.php/:year/:month/:day/:title/
+
+timezone: America/Chicago
+
+gems:
+  - jekyll-redirect-from
+
+markdown: redcarpet

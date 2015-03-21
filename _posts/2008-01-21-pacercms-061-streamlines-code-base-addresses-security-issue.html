@@ -1,0 +1,24 @@
+---
+layout: post
+status: publish
+published: true
+title: PacerCMS 0.6.1 Streamlines Code Base, Addresses Security Issue
+wordpress_id: 26
+wordpress_url: http://pacercms.sourceforge.net/index.php/2008/01/21/pacercms-061-streamlines-code-base-addresses-security-issue/
+date: '2008-01-21 19:34:02 -0600'
+date_gmt: '2008-01-22 01:34:02 -0600'
+categories:
+- Releases
+tags: []
+comments: []
+---
+<p>We are proud to announce the next release of PacerCMS, 0.6.1. This release is aimed at developers looking to extend the back-end Site Administrator panel by better documentation of the functions and processes that go into publishing stories, managing users and sections. We have also cut down the number of database queries required to do routine tasks through better session management.</p>
+<p>While this version does not add any significant features for the average user other than a few bug fixes, it is recommended for all users. Our friends at RawSecurity.org have outlined a few problems that would allow a malicious visitor to conceivably obtain access rights through <a href="http://en.wikipedia.org/wiki/Cross-site_scripting">cross-site scripting (XSS)</a> in the content submission public module (<tt>./submit.php</tt>). Even if you are not able to process a full update right now, please do replace your existing submit.php file with the version found on our <a href="http://pacercms.googlecode.com/svn/trunk/submit.php">subversion repositories</a>. While we cannot guarantee that a site running PacerCMS will be safe from people with malicious intent, we do take security issues seriously.</p>
+<h3>This Release (R101)</h3></p>
+<ul>
+<li>Streamlined code base in Site Administrator</li>
+<li>Adoption of phpDoc.org code commenting</li>
+<li>Security release</li>
+<li>Various bug fixes and minor enhancements from the <a href="http://groups.google.com/group/pacercms-discuss">Developer&#8217;s List</a></li><br />
+</ul></p>
+<p><strong><a href="/index.php/download/">Download PacerCMS 0.6.1</a></strong></p>

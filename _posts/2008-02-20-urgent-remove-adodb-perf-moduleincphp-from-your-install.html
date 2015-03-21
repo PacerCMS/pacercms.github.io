@@ -1,0 +1,22 @@
+---
+layout: post
+status: publish
+published: true
+title: 'Urgent: Remove adodb-perf-module.inc.php from your install'
+wordpress_id: 28
+wordpress_url: http://pacercms.sourceforge.net/index.php/2008/02/20/urgent-remove-adodb-perf-moduleincphp-from-your-install/
+date: '2008-02-20 19:55:07 -0600'
+date_gmt: '2008-02-21 01:55:07 -0600'
+categories:
+- Site News
+- Development Notes
+- Tips &amp; Tutorials
+tags: []
+comments: []
+---
+<p>A vulnerability in the <a href="http://adodblite.sourceforge.net/">ADOdb Lite</a> package that PacerCMS uses to interact with the database has been discovered that could potentially allow an attacker to execute PHP on your system. Please <strong>remove the following file</strong> from your install, as its functionality is of limited use to the software at this time.</p>
+<p>	<tt>./includes/adodb_lite/adodb-perf-module.inc.php</tt></p>
+<p>In order for the attacker to exploit your system <tt>register_globals</tt> would have to be enabled on your PHP installation with your Web host. Most modern hosts have this feature disabled by default, but some (including GoDaddy) leave it enabled for backwards compatibility. Further reading:</p>
+<p>	http://php.net/register_globals</p>
+<p>Again, please take a moment to remove the specified file from your installations even if you do not have <tt>register_globals</tt> enabled. The problem has been reported to the developer of ADOdb Lite, but a patched version is not yet available.</p>
+<p>Running an online newspaper or magazine may bring some unwelcome attention from those seeking to exploit vulnerabilities in PacerCMS. We have received a great deal more traffic as of late as a result of our previous vulnerability and a few other minor examples that would effect a very small percentage of Web hosts. With that in mind, realize that your site is always in the crosshairs of an attacker because he or she can draw a great deal of attention by defacing or disabling your Web site. If you come across a site outlining a vulnerability in the software, please let us know (through direct e-mail) so that we may act quickly.</p>

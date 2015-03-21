@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+  <head>
+{% include meta_data.html %}
+{% include head_assets.html %}
+  </head>
+  <body class="{{ page.layout }}">
+
+{% include top_bar.html %}
+
+    <br />
+
+    <div class="row">
+      <div class="small-12 columns default-content">
+
+{{ content }}
+
+      </div>
+    </div>
+
+    <br />
+
+    <div class="row">
+      <div class="small-12 columns">
+
+{% include footer.html %}
+
+      </div>
+    </div>
+
+{% include footer_scripts.html %}
+
+{% include google_analytics.html %}
+
+  </body>
+</html>
